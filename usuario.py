@@ -12,6 +12,8 @@ class Formulario:
         self.formulario.geometry("450x600")
         self.formulario.config(cursor="hand2")
         
+        self.formulario.bind('<Return>', lambda e: self.hacer_clic())
+        
         self.iniciar_preguntas() 
         return self.formulario
     
