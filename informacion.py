@@ -6,6 +6,8 @@ class Informacion:
         self.info = Ventana.Tk()
         self.info.title("REGISTRO COMPLETO DE CLIENTES")
         self.info.geometry("800x900")
+        self.info.bind('<Return>', lambda e: self.hacer_clic()) #Para que se puedan enviar datos con el ENTER.
+        #Return == Enter. Para el sistema
 
         Ventana.Label(self.info, text="¿Cuál es el tipo de documento?").pack()
         self.combo_tipo_doc = ttk.Combobox(self.info, values=["Cédula de Ciudadanía", "Tarjeta de Identidad", "Pasaporte"])
